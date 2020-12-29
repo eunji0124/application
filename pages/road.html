@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tazzle</title>
+
+  <!-- Material Icons CSS -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Material CSS -->
+  <link rel="stylesheet" href="../css/materialize.min.css">
+
+  <!-- My CSS -->
+  <link rel="stylesheet" href="../css/main.css">
+
+  <!-- Mainfest JSON -->
+  <link rel="manifest" href="/manifest.json">
+
+</head>
+<body id="page-road"> <!-- 수정 -->
+  
+  <!-- 상단 컨텐츠 영역 시작 -->
+  <div id="header">
+     <!-- 상단 네비게이션 시작 -->    
+     <nav id="navi">
+      <div class="container">  
+        
+        <!-- App Logo -->
+        <h1 class="center-align">
+          <a href="../index.html">
+            <img src="../images/topbar/name.png" alt="brandlogo">
+          </a>
+        </h1>
+  
+        <!-- Next & Prev -->
+        <a href="#" id="prev-btn"><img src="../images/topbar/goback.png" alt="return"></a>
+  
+        <a href="#" id="mypage-btn"><img src="../images/topbar/mypage.png" alt="mypage"></a>
+  
+      </div>
+    </nav> 
+    
+    <!--티켓 영역 시작 -->
+    <div id="ticket-box">
+      <h3 class="center-align">이용권 구매</h3>
+  
+      <ul>    
+        <li>
+          <a class="waves-effect waves-light btn white black-text">
+            <h4>일일권</h4>
+            <span></span>
+            <p>1시간권, 2시간권 선택이 가능합니다.</p> 
+          </a>
+        </li>
+        <li>
+          <a class="waves-effect waves-light btn white black-text">
+            <h4>정기권</h4>
+            <span></span>
+            <p>7일, 30일, 365일 선택이 가능합니다.</p>
+          </a>
+        </li>
+        <li>
+          <a class="waves-effect waves-light btn white black-text">
+            <h4>단체권</h4>
+            <span></span>
+            <p>최대 4인까지 이용이 가능합니다.</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+  <!-- 수정 시작 -->
+
+  <!-- 컨텐츠 영역 시작 -->  
+  <div id="contents">  
+
+    <div class="search">
+
+      <div class="search-form">
+        <div class="form-group">
+          <label for="">출발</label>
+          <input type="text" name="" id="add-start" placeholder="현위치 : 서울 종로구 인사동 137">
+        </div>
+
+        <div class="form-group">
+          <label for="">도착</label>
+          <input type="text" name="" id="add-end" placeholder="도착위치 : 부산 해운대구 
+          해운대로 10">
+        </div>
+
+        <a href="#" id="switch-btn"><img src="../images/arrow.png" alt="화살표이미지" class="right"></a>        
+      </div>
+
+      <p><a class="btn" id="search-btn">탐험 시작</a></p>
+    </div>
+
+
+
+    <div class="place">
+      <h4>자주가는 장소 <span class="right"><a href="#">편집</a></span></h4> <!-- 수정 -->
+      
+      <ul class="clearfix">
+        <li>
+          <a href="#"><img src="../images/homeicon.png" alt="집으로"><br>집으로</a>
+        </li>
+        <li>
+          <a href="#"><img src="../images/officeicon.png" alt="회사로">
+            <br>회사로</a>
+        </li>
+        <li>
+          <a href="#"><img src="../images/plusbtn.png" alt="추가버튼"></a>
+        </li>
+      </ul>
+
+    </div>
+
+    <div class="divider"></div>
+
+
+    <div class="route">
+      <h4>타즐러 추천 자전거 길 
+        <span class="right"><a href="#">거리순</a> <a href="#">인기순</a> <a href="#">추천순</a></span> <!-- 수정 -->
+      </h4>            
+
+      <div class="road-gallery clearfix">
+        <div class="box1">
+          <a href="#"><img src="../images/bikeroad1.png" alt="한옥마을 자전거 길"></a>
+        </div>
+  
+        <div class="box2">
+          <a href="#"><img src="../images/bikeroad2.png" alt="석촌호수 자전거 길"></a>
+        </div>
+  
+        <div class="box3">
+          <a href="#"><img src="../images/bikeroad3.png" alt="한강 자전거 길"></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 수정 끝 -->
+
+
+ <!-- 하단 컨텐츠 영역 시작 -->
+ <footer class="page-footer" id="footer">
+  <ul class="clearfix">
+    <li><a href="howtouse.html"><span>1</span></a> <strong>이용안내</strong></li>
+    <li><a href="#"><span>2</span></a> <strong>이용권구매</strong></li>
+    <li><a href="../index.html"><span>3</span></a> <strong>홈</strong></li>
+    <li><a href="road.html"><span>4</span></a> <strong>탐험하기</strong></li>
+    <li><a href="#"><span>5</span></a> <strong>고객센터</strong></li>
+  </ul>
+</footer>
+
+
+
+  <!-- jQuery JS -->
+  <script src='http://code.jquery.com/jquery-1.9.1.min.js'></script>
+
+  <!-- Material CSS -->
+  <script src="../js/materialize.min.js"></script>
+  
+  <!-- My JS -->  
+  <script src="../js/app.js"></script>
+  <script src="../js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,657 @@
+@charset "utf-8";
+
+@import url(reset.css);
+
+
+/* ******************* 공통영역 선언 시작 ****************** */
+
+h1, h2, h3, h4, h5, h6{ margin: 0;}
+
+
+/* ***************************** 상단 영역 시작 ***************************** */
+#header{
+  width: 100%; height: 140px; position: fixed; left: 0; top: 0;
+  z-index: 9999;
+}
+
+/* 상단 네비게이션 영역 */
+#navi{
+  /* width: 100%; height: 120%; */
+  width: 100%; height: 100%; /* 수정 */  
+  background: transparent url(../images/topbar/topbackground.png) no-repeat 50% -70px !important;
+  background-size: cover;
+  box-shadow: none;
+  position: relative; 
+  z-index: 10000;
+}
+#navi .container{ height: 100%; }  /* 수정 */
+#navi h1{ padding-top: 28px; }  /* 수정 */
+#navi h1 a{display: inline-block;}
+#navi h1 a img{width: 50%;}
+
+#navi #prev-btn{ width: 25px; height: 34px; position: absolute; left: 10px; top: 33px; }  /* 수정 */
+#navi #prev-btn img{width: 100%;}
+
+#navi #mypage-btn{ width: 50px; height: 50px; position: absolute; right: 10px; top: 30px;}
+#navi #mypage-btn img{width: 100%;}
+
+/* **** 이용권 구매 Start  ***** */
+#header #ticket-box{
+  width: 100%; height: 85vh; text-align: center;
+  padding-top: 100px;
+  background: url(../images/background-img.png) no-repeat 50% 100%;
+  background-size: cover;
+  position: absolute; left: 0; top: -750px;  /* 수정 */
+  z-index: 10;
+
+  -webkit-transition: all ease 0.8s;
+  -moz-transition: all ease 0.8s;
+  -o-transition: all ease 0.8s;
+  transition: all ease 0.8s;
+}
+#header #ticket-box h3{
+  width: 100%; height: 70px;
+  font: bold 2.2rem/70px 'Roboto', sans-serif;
+  margin-bottom: 10px; /* 수정 */
+  position: relative; margin-top: 4vh; /* 수정 */
+}
+#header #ticket-box h3::after{
+  content:''; display: block; 
+  width: 70%; height: 1px; background-color: rgba(0, 0, 0, 0.5);
+  position: absolute; left: 50%; bottom: 10px;
+  margin-left: -35%;
+}
+#header #ticket-box ul{padding: 0; margin: 0; width: 88%; margin: auto;}
+#header #ticket-box li{padding-top: 15px; width: 100%; height: auto;}
+#header #ticket-box li:first-child{padding: 0;}
+#header #ticket-box li a{
+  display: inline-block; width: 80%;height: 90px; padding-top: 10px;
+  border-radius: 10px; border: 1px solid rgb(185, 185, 185);
+}
+#header #ticket-box li a:hover{background-color: #88d2dd !important; color: #fff !important;}
+
+
+#header #ticket-box ul h4{
+  height: 35px;
+  font: bold 2rem/35px 'Roboto', sans-serif;
+  margin: 0 0 15px; position: relative;
+}
+#header #ticket-box ul h4::after{
+  content:''; display: block; 
+  width: 96%; height: 1px; background-color: #888;
+  position: absolute; left: 50%; bottom: -5px;
+  margin-left: -48%;
+}
+#header #ticket-box ul a span{
+  display: block; width: 23%; height: 1vh;
+  background: #88d2dd; border-radius: 0.5vh;
+  position: absolute; left: 50%; top: 40%;
+  z-index: -5;
+  
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+#header #ticket-box ul a:hover span{
+  background: #5d8288;
+}
+#header #ticket-box ul p{
+  /* padding-top: 5px; */
+  font: 1.3rem 'Roboto', sans-serif;
+}
+
+
+/* 티켓 활성화 토글클래스 */
+.ticket-act{
+  top: 0 !important;   /* 수정 */
+}
+
+
+/* ***************************** 컨텐츠 영역 시작 ***************************** */
+#contents{
+  width: 100%;
+  height: 100vh;
+  position: absolute;   /* 수정 */
+  left: 0;
+  top: 0;
+} 
+
+
+/* ***************************** 하단 푸터영역 시작 ***************************** */
+
+/* 하단 네비게이션 영역 */
+#footer{
+  width: 100%; height: 80px;
+  position: fixed; left: 0; bottom: 0;
+  background: url(../images/footer_nav.png) no-repeat top center;
+  background-size: cover;
+  padding: 0;
+}
+#footer ul{
+  width: 100%; height: 80px;
+  padding-top: 5px; text-align: center; 
+}
+
+#footer ul li{ 
+  width: 20%; height: 100%; 
+  display: block; list-style: none;
+  padding-top: 0px;
+  float: left;
+  position: relative;
+}
+#footer ul li a{
+  display: block; width: 60px; height: 60px; margin: auto;
+  text-decoration: none; position: relative; padding-top: 0;
+}
+#footer ul li a span{ 
+  display: block; width: 60px; height: 60px;
+  color: #222;
+  position: relative;
+  z-index: 10;
+  background:rgba(255,255,255,0) no-repeat 13px 10px;
+  background-size: 60% 60%;
+  text-indent: -9999px;
+}
+
+#footer ul li:nth-child(1) a span{
+  background-image: url(../images/icon_before/icon_before_1.png);
+}
+#footer ul li:nth-child(2) a span{
+  background-image: url(../images/icon_before/icon_before_2.png);
+}
+#footer ul li:nth-child(3) a span{
+  background-image: url(../images/icon_before/icon_before_3.png);
+}
+#footer ul li:nth-child(4) a span{
+  background-image: url(../images/icon_before/icon_before_4.png);
+}
+#footer ul li:nth-child(5) a span{
+  background-image: url(../images/icon_before/icon_before_5.png);
+}
+
+
+#footer ul li:nth-child(1) a:hover span{
+  background-image: url(../images/icon_after/icon_after_1.png);
+}
+#footer ul li:nth-child(2) a:hover span{
+  background-image: url(../images/icon_after/icon_after_2.png);
+}
+#footer ul li:nth-child(3) a:hover span{
+  background-image: url(../images/icon_after/icon_after_3.png);
+}
+#footer ul li:nth-child(4) a:hover span{
+  background-image: url(../images/icon_after/icon_after_4.png);
+}
+#footer ul li:nth-child(5) a:hover span{
+  background-image: url(../images/icon_after/icon_after_5.png);
+}
+
+
+#footer ul li strong{
+  display: inline-block;
+  width: 100%; height: 20px; 
+  font-weight: normal;
+  text-align: center;
+  position: absolute; left: 0; bottom: 5px; 
+}
+
+/* Transition Area Start */
+#footer ul li a{
+  -webkit-transition: all ease 0.8s;
+  -moz-transition: all ease 0.8s;
+  -o-transition: all ease 0.8s;
+  transition: all ease 0.8s;
+}
+#footer ul li a span{
+  -webkit-transition: all ease 0.2s;
+  -moz-transition: all ease 0.2s;
+  -o-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+}
+
+/* hover */
+#footer ul li a:hover span{      
+  border-radius: 70px;             
+  background-color: rgba(255,255,255,1); 
+}
+
+#footer ul li a:hover::after{
+  content:'';
+  display: block;
+  width: 100px; height: 50px;
+  border-radius: 100px 100px 0 0;  
+  position: absolute; left: -20px; top: -25px;    
+  background: no-repeat top center; 
+}
+
+#footer ul li:nth-child(1) a:hover::after{
+  background-image: url(../images/bar_after/1.howtouse.png);
+}
+
+#footer ul li:nth-child(2) a:hover::after{
+  background-image: url(../images/bar_after/2.buytheticket.png);
+}
+
+#footer ul li:nth-child(3) a:hover::after{
+  background-image: url(../images/bar_after/3.home.png);
+}
+
+#footer ul li:nth-child(4) a:hover::after{
+  background-image: url(../images/bar_after/4.tour.png);
+}
+
+#footer ul li:nth-child(5) a:hover::after{
+  background-image: url(../images/bar_after/5.customerservice.png);
+}
+
+
+
+
+
+/* ******************* 페이지별 개별 영역 선언 시작 ****************** */
+
+
+/* ******** 페이지별 개별 영역 선언 시작 ******** */
+
+/* ******** Page-main 영역 선언 시작 ******** */
+
+/* 홈화면 컨텐츠 */
+
+/* Map */
+#page-main #contents .map{
+  width: 100%;
+  height: 100%;
+  background: url(../images/map2.jpg) no-repeat 50% 80px;
+  background-size: cover;
+  position: static;   /* 수정 */
+}
+
+#page-main #contents>div{position: absolute;}
+
+/* Notice */
+#page-main #contents .notice{
+  width: 100%; height: 70px; text-align: left; line-height: 50px;
+  background-color: rgba(0,0,0,0.3);
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
+  left: 0; top: 95px;   /* 수정 */
+  padding: 20px 0 0 20px;
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+/* Ponter-box */
+#page-main #contents .pointer-box{
+  width: 75px; height: 75px;
+  position: absolute; left: 50%; top: 56%;
+  
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+#page-main #contents .pointer-box>img{width: 100%; height: auto;}
+#page-main #contents .pointer-box>div{
+  width: 130px; height: 170px; background-color: #fff;
+  padding: 20px 10px; 
+  position: absolute; right: -140px; bottom: -10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+#page-main #contents .pointer-box>div::after{
+  content: ''; display: block; width: 20px; height: 20px; background-color: #fff;
+  position: absolute; left: -10px; bottom: 50px;
+
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#page-main #contents .pointer-box>div h4{
+  font-size: 2rem; font-weight: bold; margin:0;
+}
+#page-main #contents .pointer-box>div strong{
+  font-size: 1.4rem; font-weight: bold;
+  position: relative;
+  top: 1px;
+}
+#page-main #contents .pointer-box>div strong span{
+  font-size: 6rem;
+  font-weight: bold;
+  position: relative;
+  line-height: 1em;
+}
+#page-main #contents .pointer-box>div>div{
+  width: 100%; height: 80px; 
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding-top: 3px;
+
+}
+#page-main #contents .pointer-box button{
+  margin: 7px auto;
+  padding: 5px 25px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+#page-main #contents .pointer-box button:active{box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);}
+
+/* Btn-group */
+#page-main #contents .btn-group{
+  width: 100px; height: 25px;
+  position: absolute; right: 30px; bottom: 150px;  /* 수정 */
+  text-align: center;
+}
+#page-main #contents .btn-group a{
+  width: 100%; height: 28px; margin-bottom: 8px;
+  font-size: 1.4rem; font-weight: bold;
+  display: block;
+  background-color: rgba(255,255,255,1.0);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  padding: 5px;
+  border-radius: 5px;
+}
+#page-main #contents .btn-group a:active{ box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);}
+#page-main #contents .btn-group img{
+   height: 70%;
+}
+#page-main #contents .btn-group a:last-child{margin-bottom: 0;}
+
+
+
+/* ******** Page-howtouse 영역 선언 시작 ******** */
+/* Contents */
+#page-howtouse #contents{height: 100%;}
+
+#page-howtouse #contents ul{
+  width: 340px; height: 650px;
+  position: absolute; left: 50%; top: 170px;
+  
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+#page-howtouse #contents ul::after{
+  content:''; display: block; clear: both;
+}
+
+#page-howtouse #contents li{  /* 수정 */
+  width: 150px; 
+  height: 150px; 
+  margin: 0 30px 30px 0;
+  float: left;
+  cursor: pointer;
+  border-radius: 10px;
+}
+#page-howtouse #contents li:nth-child(2n){margin-right: 0;}
+
+#page-howtouse #contents li a{
+  display: block; width: 100%; height: 100%; border-radius: 5px;   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); 
+}
+#page-howtouse #contents li a:active{}
+#page-howtouse #contents li a img{
+  width: 100%; border-radius: 5px;
+  
+  
+}
+#page-howtouse #contents li:nth-child(1),
+#page-howtouse #contents li:nth-child(3),
+#page-howtouse #contents li:nth-child(5){
+  margin-right: 10%; 
+} 
+
+#page-howtouse #contents li a img:hover{
+  box-shadow: none;
+}
+
+
+/* 수정시작 */
+
+/* ******** Page-road 영역 선언 시작 ******** */
+#page-road #contents{height: 100%;}
+
+/* 탐험하기 */
+#page-road #contents .search{
+  width: 100%; height: 390px; 
+  padding-top: 160px;
+  margin-bottom: 20px;
+  background: url(../images/background-img.png) no-repeat 50% 100%;
+  background-size: cover;
+}
+#page-road #contents .search-form{
+  width: 80%; padding: 10px; margin: auto; background-color: #fff;
+  box-shadow: 0 0 8px #888; position: relative; border-radius: 5px;
+}
+#page-road #contents .search-form label{ 
+  display: inline-block; width: 20%; height: 50px; padding: 5px 0;
+  font: bold 1.4rem/35px "맑은 고딕", sans-serif; text-indent: 10px;
+  position: relative;
+}
+#page-road #contents .search-form>div:first-child label::before{
+  content:''; display: block;
+  width: 50px; height: 1px; background-color: #ccc;
+  position: absolute; bottom: 8px; left: 5px;
+}
+#page-road #contents .search-form label::after{
+  content:''; display: block;
+  width: 1px; height: 20px; background-color: #ccc;
+  position: absolute; right: 0; top: 13px;
+}
+#page-road #contents .search-form input{
+  width: 60% !important; height: 40px; font-size: 1.3rem; text-indent: 10px;
+}
+#page-road #contents #switch-btn{
+  width: 27px; height: 52px; position: absolute; right: 20px; top: 35px;
+}
+#page-road #contents .search p{ text-align: center; margin-top: 30px; }
+
+#page-road #contents .search p a{ border-radius: 26px; width: 120px;}
+
+/* 자주가는 장소 */
+#page-road #contents .place{width: 100%; height: 150px; padding: 0 20px;}
+#page-road #contents .place h4{
+  width: 100%; height: 40px; line-height: 40px;
+  font-size: 1.8rem; font-weight: bold; margin-bottom: 30px;
+  background: url(../images/KakaoTalk_20190927_103722701_05.png) no-repeat 0 100%;
+}
+#page-road #contents .place h4 span{font-size: 1.4rem;}
+#page-road #contents .place ul{width: 100%;}
+#page-road #contents .place ul li{
+  width: 80px; height: 80px; float: left; margin-right: 30px; padding: 15px; 
+  text-align: center; font-weight: bold; line-height: 1.2;
+  background-color: #fff; border-radius: 50%; box-shadow: 0 0 8px #888 ;
+}
+#page-road #contents .place ul li:active{box-shadow: inset 0 0 8px #888;}
+#page-road #contents .place ul li:nth-child(2){padding-top: 10px;}
+#page-road #contents .place ul li img{width: 75%;}
+#page-road #contents .place ul li:nth-child(2) img{width: 70%; height: 75%;}
+#page-road #contents .place ul li:nth-child(3) img{ width: 95%; }
+
+#page-road #contents .divider{margin: 50px 0 30px;}
+
+
+/* 타즐러 추천 자전거 길 */
+#page-road #contents .route{width: 100%; height: 400px; padding: 0 20px;  overflow: hidden; position: relative;}
+#page-road #contents .route h4{
+  width: 100%; height: 40px; line-height: 40px;
+  font-size: 1.8rem; font-weight: bold; margin-bottom: 30px;
+  background: url(../images/KakaoTalk_20190927_103722701_05.png) no-repeat 0 100%;
+}
+#page-road #contents .route h4 span{font-size: 1.4rem;}
+
+#page-road #contents .route .road-gallery{
+  width: 640px; height: 150px; position: absolute; left: 20px; top: 60px; margin-left: -120px;
+}
+#page-road #contents .route .road-gallery>div{
+  width: 200px; height: 150px; float: left; margin-right: 20px;
+}
+#page-road #contents .route .road-gallery>div:last-child{margin-right: 0;}
+#page-road #contents .route .road-gallery>div img{width: 100%;}
+
+
+/* 수정끝 */
+
+
+/* ******************************  기존 코드 ******************************** */
+
+/* ******** Page-road 영역 선언 시작 ******** */
+
+/* 탐험하기 */
+/* #page-road1{
+  width: 100%; height: 100vh;
+  margin: 0;
+  background: url(../images/topbar2.png) no-repeat top center;
+  background-size: cover;
+  position: absolute; left: 0; top: 0;
+}
+#page-road1 #content-1{width: 100%; position: relative; margin: 150px 0 0 0;}
+
+#page-road1 #content-1>div:nth-child(1),
+#page-road1 #content-1>div:nth-child(2)
+{
+  width: 80%; height: 60px;
+  background-color: #fff;
+  border-radius: 10px;
+  line-height: 60px;
+  text-indent: 20px;
+  margin-left: 40px;
+  margin-bottom: 10px;
+  box-shadow: 0 6px 6px rgba(0,0,0,0.1)
+}
+
+#page-road1 #content-1>div img{width: 20px; height: 20px; margin-top: 20px; margin-right: 15px;}
+#page-road1 #content-1>div a{
+  font-size: 1.6rem;
+}
+#page-road1 #content-1>div strong{
+  font-size: 1.7rem; color: rgba(0,0,0,0.2);
+  font-weight: bold; margin-right: 15px;
+}
+
+#page-road1 #content-1>div:nth-child(3){
+  width: 27px; height: 52px;
+  position: absolute; right: 0; top: 10px;
+}
+
+#page-road1 #content-1>div:nth-child(3) img{
+  width: 100%; height: 100%;
+}
+
+#page-road1 #content-1 .btn{
+  width: 25%;
+  border: 1px solid rgba(117, 117, 117, 0.8);
+  color: #000;
+  background-color: rgba(59, 46, 46, 0);
+  border-radius: 30px;  
+  margin-left: 40%;
+  margin-top: 8%;
+  font-weight: bold;
+} */
+
+/* 자주가는 장소 */
+/* #page-road1 #content-2{
+  width: 100%; height: 120px; padding: 0 20px;
+  margin-top: 55px;
+  margin-bottom: 20px;
+}
+#page-road1 #content-2 h5{  
+  margin-bottom: 20px;
+}
+
+#page-road1 #content-2 ul li{float: left;}
+
+#page-road1 #content-2 ul li:nth-child(1),
+#page-road1 #content-2 ul li:nth-child(2){
+  width: 70px; height: 70px; background-color: #fff;
+  border-radius: 50%;
+  margin-right: 20px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2)
+}
+#page-road1 #content-2 ul li:nth-child(1),
+#page-road1 #content-2 ul li:nth-child(2) a{
+  display: block; text-align: center;
+  font-size: 1rem;
+}
+
+#page-road1 #content-2 ul li img{
+  margin-top: 15px;
+  width: 30px; height: 30px;
+}
+
+#page-road1 #content-2 ul li:nth-child(3){
+  width: 40px; height: 40px;
+}
+#page-road1 #content-2 ul li:nth-child(3) img{
+  margin-top: 20px;
+  width: 100%; height: 100%;
+} */
+
+/* 구분선 */
+/* 
+#page-road1 p{line-height: 0;}
+#page-road1 p img{
+  width: 100%; padding: 0 10px; 
+}
+
+#page-road1 #content-2 .bg-bar{
+  z-index: -999;
+  position: absolute; top: 434px;
+  width: 70px;
+} */
+
+
+/* 타즐러 추천 자전거 길 */
+/* #page-road1 #content-3{
+  width: 100%; height: 246px;
+  overflow: hidden;
+}
+
+#page-road1 #content-3 .bg-bar{
+  z-index: -999;
+  position: absolute; top: 580px; left: 20px;
+  width: 60px;
+}
+
+
+#page-road1 #content-3  h5{
+  padding: 0 20px;
+}
+
+#page-road1 #content-3>div{
+  width: 40%; float: left;
+  margin-right: 20px;  
+}
+#page-road1 #content-3>div img{
+  width: 100%; height: 100%;
+  box-shadow: 0 0 8px rgba(0,0,0,0.5);
+  border-radius: 10px
+}
+
+#page-road1 #content-3 .box1{
+  margin-left: -75px;
+}
+#page-road1 #content-3 .box3{margin-right: -140px;}
+
+#page-road1 #content-3 ul{
+  width: 100%; height: 15px;
+  margin-bottom: 20px;
+  padding-right: 10px;
+}
+#page-road1 #content-3 li{
+  width: 50px; height: 15px; float: right;  
+}
+#page-road1 #content-3 li a{
+  color: rgb(37, 37, 37);
+  display: block;
+}
+
+#page-road1 #content-3 li:nth-child(3) a{
+  font-weight: bold; 
+  color: #000;
+} */
+
+

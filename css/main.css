@@ -170,7 +170,7 @@ h1, h2, h3, h4, h5, h6{ margin: 0;}
   background-image: url(../images/icon_before/icon_before_5.png);
 }
 
-
+/* 호버 */
 #footer ul li:nth-child(1) a:hover span{
   background-image: url(../images/icon_after/icon_after_1.png);
 }
@@ -187,6 +187,22 @@ h1, h2, h3, h4, h5, h6{ margin: 0;}
   background-image: url(../images/icon_after/icon_after_5.png);
 }
 
+/* 엑티브 */
+#footer ul li:nth-child(1) a:active span{
+  background-image: url(../images/icon_after/icon_after_1.png);
+}
+#footer ul li:nth-child(2) a:active span{
+  background-image: url(../images/icon_after/icon_after_2.png);
+}
+#footer ul li:nth-child(3) a:active span{
+  background-image: url(../images/icon_after/icon_after_3.png);
+}
+#footer ul li:nth-child(4) a:active span{
+  background-image: url(../images/icon_after/icon_after_4.png);
+}
+#footer ul li:nth-child(5) a:active span{
+  background-image: url(../images/icon_after/icon_after_5.png);
+}
 
 #footer ul li strong{
   display: inline-block;
@@ -198,19 +214,19 @@ h1, h2, h3, h4, h5, h6{ margin: 0;}
 
 /* Transition Area Start */
 #footer ul li a{
-  -webkit-transition: all ease 0.8s;
-  -moz-transition: all ease 0.8s;
-  -o-transition: all ease 0.8s;
-  transition: all ease 0.8s;
-}
-#footer ul li a span{
   -webkit-transition: all ease 0.2s;
   -moz-transition: all ease 0.2s;
   -o-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
+#footer ul li a span{
+  -webkit-transition: all ease 0.1s;
+  -moz-transition: all ease 0.1s;
+  -o-transition: all ease 0.1s;
+  transition: all ease 0.1s;
+}
 
-/* hover */
+/* hover & active */
 #footer ul li a:hover span{      
   border-radius: 70px;             
   background-color: rgba(255,255,255,1); 
@@ -224,8 +240,21 @@ h1, h2, h3, h4, h5, h6{ margin: 0;}
   position: absolute; left: -20px; top: -25px;    
   background: no-repeat top center; 
 }
-
-#footer ul li:nth-child(1) a:hover::after{
+#footer ul li a:hover strong{display: none;}
+#footer ul li a:active span{      
+  border-radius: 70px;             
+  background-color: rgba(255,255,255,1); 
+}
+#footer ul li a:active::after{
+  content:'';
+  display: block;
+  width: 100px; height: 50px;
+  border-radius: 100px 100px 0 0;  
+  position: absolute; left: -20px; top: -25px;    
+  background: no-repeat top center; 
+}
+#footer ul li a:active strong{display: none;}
+/* #footer ul li:nth-child(1) a:hover::after{
   background-image: url(../images/bar_after/1.howtouse.png);
 }
 
@@ -243,7 +272,7 @@ h1, h2, h3, h4, h5, h6{ margin: 0;}
 
 #footer ul li:nth-child(5) a:hover::after{
   background-image: url(../images/bar_after/5.customerservice.png);
-}
+} */
 
 
 

@@ -240,7 +240,7 @@ h1, h2, h3, h4, h5, h6{ margin: 0;}
   position: absolute; left: -20px; top: -25px;    
   background: no-repeat top center; 
 }
-#footer ul li a:hover strong{display: none;}
+#footer ul li a:hover + strong{display: none;}
 #footer ul li a:active span{      
   border-radius: 70px;             
   background-color: rgba(255,255,255,1); 
@@ -253,8 +253,8 @@ h1, h2, h3, h4, h5, h6{ margin: 0;}
   position: absolute; left: -20px; top: -25px;    
   background: no-repeat top center; 
 }
-#footer ul li a:active strong{display: none;}
-/* #footer ul li:nth-child(1) a:hover::after{
+#footer ul li a:active + strong{display: none;}
+#footer ul li:nth-child(1) a:hover::after{
   background-image: url(../images/bar_after/1.howtouse.png);
 }
 
@@ -272,7 +272,7 @@ h1, h2, h3, h4, h5, h6{ margin: 0;}
 
 #footer ul li:nth-child(5) a:hover::after{
   background-image: url(../images/bar_after/5.customerservice.png);
-} */
+}
 
 
 
